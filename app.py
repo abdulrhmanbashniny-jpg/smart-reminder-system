@@ -7,14 +7,15 @@ from datetime import datetime, date
 # --- إعدادات الصفحة والهوية ---
 st.set_page_config(page_title="Expiry Sentinel Pro", page_icon="🛡️", layout="wide")
 
-# CSS مخصص لتحسين المظهر
+# CSS مخصص لتحسين المظهر (تم تصحيح السطر أدناه)
 st.markdown("""
     <style>
     .main { background-color: #f8f9fa; }
     .stMetric { background-color: #ffffff; padding: 20px; border-radius: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
     div[data-testid="stExpander"] { border: none; box-shadow: 0 2px 4px rgba(0,0,0,0.05); background-color: white; }
     </style>
-    """, unsafe_allow_stdio=True)
+    """, unsafe_allow_html=True)
+
 
 # --- الاتصال بـ Supabase ---
 @st.cache_resource
